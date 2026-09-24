@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #110720;
+  --foreground: #ffffff;
+  --accent: #c084fc;
+  --accent-strong: #7c3aed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: #110720;
+  --color-panel: #1a0d2e;
+  --font-sans: var(--font-poppins);
+  --font-script: var(--font-caveat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: #7c3aed;
+  color: #fff;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.caret {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit {
+  animation: orbit-spin 48s linear infinite;
+}
+
+.orbit-reverse {
+  animation: orbit-spin 64s linear infinite reverse;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 4.5s ease-in-out infinite;
+}
