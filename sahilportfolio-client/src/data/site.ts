@@ -4,11 +4,10 @@ export const site = {
   college: "NIT Srinagar",
   batch: "2023 — 2027",
   year: "4th year",
-  email: "sahil.ece@nitsri.ac.in",
+  email: "sahilkp1821@gmail.com",
   socials: {
     github: "https://github.com/",
     linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
   },
 } as const;
 
@@ -48,7 +47,7 @@ export const highlights = [
     title: "Ink other people can follow",
     description:
       "Quill — a blogging app I built so writers can publish, readers can follow, like, and comment, and libraries of bookmarks can stay public or private.",
-    href: "#lab",
+    href: "https://quill-frontend-e0uh.onrender.com",
     accent: "amber",
     icon: "quill",
   },
@@ -95,17 +94,17 @@ export const projects = [
     label: "Featured Project",
     title: "Quill — Read, write, collect",
     description:
-      "A web app for people who write and people who read. Publish posts, follow other authors, like and comment on blogs, and keep a library of bookmarked pieces — public or private. Auth sits in front of anything that changes a story.",
-    href: "#lab",
-    mockup: "quill",
-    stack: ["Next.js", "React", "Python", "FastAPI", "REST APIs"],
-  },
+       "A full-stack blogging platform for publishing posts, following authors, and interacting with content.",
+  href: "https://quill-frontend-e0uh.onrender.com",
+  mockup: "quill",
+  stack: ["Next.js", "React", "Python", "FastAPI", "PostgreSQL"],
+},
   {
     label: "Featured Project",
     title: "Sahil's Portfolio",
     description:
       "Personal site for my work, projects, and training. Built with Next.js, React, TypeScript, and Tailwind CSS — app router, client-side motion for the role typewriter, and section-based layout for Home, Lab, and Contact.",
-    href: "#home",
+    href: "https://sahil-s-portfolio-kappa.vercel.app",
     mockup: "portfolio",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
   },
