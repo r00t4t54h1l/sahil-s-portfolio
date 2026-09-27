@@ -22,17 +22,7 @@ export function Contact() {
         </div>
 
         <div className="mt-12 flex justify-center gap-6">
-          <a
-            href={site.socials.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-purple-500/30 bg-white/10 transition-all hover:border-purple-500/50 hover:bg-white/20"
-            aria-label="Instagram"
-          >
-            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
-              <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.6A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8zM17.2 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" />
-            </svg>
-          </a>
+          
           <a
             href={site.socials.github}
             target="_blank"
