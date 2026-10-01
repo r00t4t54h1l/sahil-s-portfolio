@@ -99,6 +99,88 @@ function QuillMockup() {
   );
 }
 
+
+function RecruitXMockup() {
+  const candidates = [
+    ["Test Candidate", "100%", "React · TypeScript · Node.js"],
+    ["Alex Morgan", "92%", "React · PostgreSQL · Express"],
+    ["Priya Sharma", "87%", "TypeScript · Node.js · SQL"],
+  ];
+
+  return (
+    <div className="flex h-full bg-[#070a12] text-white">
+      <aside className="hidden w-[132px] flex-col gap-4 border-r border-white/10 px-3 py-4 text-[11px] text-white/55 sm:flex">
+        <p className="px-2 text-sm font-semibold text-white">RecruitX</p>
+        {["Dashboard", "Jobs", "Candidates", "Applications"].map((item, i) => (
+          <span
+            key={item}
+            className={`rounded-lg px-2 py-1.5 ${
+              i === 0 ? "bg-purple-500/15 text-purple-200" : ""
+            }`}
+          >
+            {item}
+          </span>
+        ))}
+        <div className="mt-auto rounded-lg border border-white/10 px-2 py-2">
+          <p className="text-white/80">Recruiter</p>
+          <p className="text-[10px] text-white/40">RecruitX</p>
+        </div>
+      </aside>
+
+      <div className="flex min-w-0 flex-1 flex-col">
+        <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+          <div>
+            <p className="text-[10px] text-purple-300">Talent Intelligence</p>
+            <p className="text-sm font-semibold">Recruiter Dashboard</p>
+          </div>
+          <span className="rounded-full bg-emerald-400/10 px-2 py-0.5 text-[10px] text-emerald-300">
+            Active
+          </span>
+        </div>
+
+        <div className="grid flex-1 grid-cols-3 gap-2 p-3">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+            <p className="text-[9px] text-white/45">Active Jobs</p>
+            <p className="mt-1 text-xl font-semibold">12</p>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+            <p className="text-[9px] text-white/45">Candidates Matched</p>
+            <p className="mt-1 text-xl font-semibold">148</p>
+          </div>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+            <p className="text-[9px] text-white/45">80%+ Matches</p>
+            <p className="mt-1 text-xl font-semibold text-purple-300">64</p>
+          </div>
+
+          <div className="col-span-3 overflow-hidden rounded-xl border border-white/10 bg-white/5 p-3">
+            <div className="mb-2 flex items-center justify-between">
+              <p className="text-[10px] font-semibold">Full Stack Developer</p>
+              <span className="text-[9px] text-white/40">Candidates</span>
+            </div>
+
+            <div className="space-y-1.5">
+              {candidates.map(([name, score, skills]) => (
+                <div
+                  key={name}
+                  className="flex items-center justify-between rounded-lg border border-white/5 bg-white/[0.03] px-2.5 py-2"
+                >
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-medium">{name}</p>
+                    <p className="truncate text-[8px] text-white/40">{skills}</p>
+                  </div>
+                  <span className="ml-2 rounded-full bg-purple-500/15 px-2 py-1 text-[9px] font-semibold text-purple-200">
+                    {score}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function PortfolioMockup() {
   return (
     <div className="flex h-full flex-col bg-[#110720] text-white">
@@ -195,6 +277,8 @@ export function Projects() {
                     <div className="relative h-full w-full overflow-hidden rounded-lg">
                       {project.mockup === "quill" ? (
                         <QuillMockup />
+                      ) : project.mockup === "recruitx" ? (
+                        <RecruitXMockup />
                       ) : (
                         <PortfolioMockup />
                       )}

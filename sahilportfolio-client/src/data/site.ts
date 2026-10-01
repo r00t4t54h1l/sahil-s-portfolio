@@ -108,4 +108,20 @@ export const projects = [
     mockup: "portfolio",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
   },
+    {
+    label: "Featured Project",
+    title: "RecruitX — AI Talent Intelligence Platform",
+    description:
+      "A full-stack recruitment platform for job posting, candidate applications, skill and experience matching, and recruiter candidate insights.",
+    href: "https://recruit-x-livid.vercel.app",
+    mockup: "recruitx",
+    stack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express",
+      "Node.js",
+      "PostgreSQL",
+    ],
+  },
 ] as const;
